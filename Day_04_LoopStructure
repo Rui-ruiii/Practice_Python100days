@@ -1,0 +1,16 @@
+#Practice1:
+#enter a number and judge if it's a prime number
+num = int(input("please enter a number:"))
+i = 2
+for i in range(2,num):
+    if num % i == 0:
+        print("it isn't a prime number")
+        break
+    else:
+        print("it's a prime number")
+        break
+        
+        
+       
+#Practice2:
+#enter two int numbers and calculate their greastest common divisor and their lowest common multiple 
