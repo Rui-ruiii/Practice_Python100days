@@ -48,3 +48,32 @@ print("最大公约数为 %i" % nn)
 print("最小公倍数为 %i" % CM)
 
 #there is an other way more simplify
+#in this way，traverse from the smaller number，ensure the found commen divisor is the biggest
+x = int(input('x = '))
+y = int(input('y = '))
+if x > y:
+    x, y = y, x
+for factor in range(x, 0, -1):
+    if x % factor == 0 and y % factor == 0:
+        print('%d和%d的最大公约数是%d' % (x, y, factor))
+        print('%d和%d的最小公倍数是%d' % (x, y, x * y // factor))
+        break
+        
+        
+#print triangular pattern
+i = 1
+while i < 6 :
+    j = 6 - i
+    print(" " * j + "*" * i)
+    i += 1
+    
+i = 1
+while i < 6:
+    print("*" * i)
+    i += 1
+
+i = 0
+while i < 6 :
+    j =  6 - i
+    print(" " * j + "*" * ( i * 2 + 1 ) )
+    i += 1
