@@ -35,3 +35,18 @@ for i in range(1,10000):
             print("公鸡%i只，母鸡%i只,小鸡%i只" %(rooster,hen,chick))
         else:
             continue
+
+"""输出斐波那契数列的前20个数
+1 1 2 3 5 8 13 21 ..."""
+
+a = 0
+b = 1
+c = a + b
+print(c)
+i = 1
+while i < 20:
+    c = a + b
+    print(c)
+    a = b
+    b = c
+    i += 1
