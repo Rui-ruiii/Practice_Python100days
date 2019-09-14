@@ -50,3 +50,49 @@ while i < 20:
     a = b
     b = c
     i += 1
+
+
+
+"""Craps赌博游戏
+玩家摇两颗色子 如果第一次摇出7点或11点 玩家胜
+如果摇出2点 3点 12点 庄家胜 其他情况游戏继续
+玩家再次要色子 如果摇出7点 庄家胜
+如果摇出第一次摇的点数 玩家胜
+否则游戏继续 玩家继续摇色子
+玩家进入游戏时有1000元的赌注 赌注为10 全部输光游戏结束"""
+
+from random import randint
+
+money = 1000
+times_of_play = 0
+class Shakepoint():
+    def Shake(self):
+        global point
+        point = randint(1,6) + randint(1,6)
+
+first = Shakepoint()
+times_of_play += 1
+first.Shake()
+first_point = point
+if point == 7 or point == 11:
+    money += 10
+elif point == 2 or point == 12 or point == 3:
+    money -= 10
+
+while money:
+    second = Shakepoint()
+    second.Shake()
+    times_of_play += 1
+    print("The game has lasted for %i times" %times_of_play)
+    if point == 7:
+        money -= 10
+    elif point == first_point:
+        money += 10
+
+
+
+
+
+
+
+
