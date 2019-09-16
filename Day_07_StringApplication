@@ -22,3 +22,17 @@ code = ''
 for x in range(0,char_len):
     code += (char[random.randint(0,len(char) - 1)])
 print(code)
+
+#this is a function for find the biggest and the second biggest value of a list "x"
+def Max(x):
+    a1,a2 = x[0],x[1]
+    if a1 < a2:
+        a1,a2 = x[1],x[0]
+    for i in range(2,len(x)):
+        if x[i] > a1:
+            a1,a2 = x[i],a1
+        elif x[i] > a2 and x[i] < a1:
+            a2 = x[i]
+        else:
+            continue
+    print("the biggest and second biggest value in x is %i and %i"%(a1,a2))
